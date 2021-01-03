@@ -1,0 +1,5 @@
+arturo@arturomachine:~/opiskelukansio/2020_syksy/devops_docker/part_1$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+3f107db9f25a        redis               "docker-entrypoint.s…"   22 minutes ago      Up 22 minutes               6379/tcp            fervent_mccarthy
+b78835238753        mariadb             "docker-entrypoint.s…"   28 minutes ago      Exited (0) 21 minutes ago                       hopeful_yalow
+03f324a57e7b        nginx               "/docker-entrypoint.…"   32 minutes ago      Exited (0) 21 minutes ago                       pensive_mclaren

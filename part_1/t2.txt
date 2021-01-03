@@ -1,0 +1,4 @@
+arturo@arturomachine:~/opiskelukansio/2020_syksy/devops_docker/part_1$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+arturo@arturomachine:~/opiskelukansio/2020_syksy/devops_docker/part_1$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES

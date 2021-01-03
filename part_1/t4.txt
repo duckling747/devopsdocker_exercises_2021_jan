@@ -1,0 +1,16 @@
+arturo@arturomachine:~/opiskelukansio/2021_kevat/devops_docker/part_1$ docker run -d -it --rm --name exer devopsdockeruh/exec_bash_exercise
+2393591b01c4d8cc8ea6676759eacf72660cb92b26c00c313715ad4a15327088
+
+arturo@arturomachine:~/opiskelukansio/2021_kevat/devops_docker/part_1$ docker exec -it exer bash
+
+root@2393591b01c4:/usr/app# ls
+Dockerfile  README.md  index.js  logs.txt
+
+root@2393591b01c4:/usr/app# tail -f ./logs.txt 
+"Docker is easy"
+Sun, 03 Jan 2021 10:12:57 GMT
+Sun, 03 Jan 2021 10:13:00 GMT
+Sun, 03 Jan 2021 10:13:03 GMT
+Sun, 03 Jan 2021 10:13:06 GMT
+Secret message is:
+"Docker is easy"

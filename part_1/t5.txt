@@ -1,0 +1,20 @@
+arturo@arturomachine:~/opiskelukansio/2021_kevat/devops_docker/part_1$ docker run -d --rm -it --name ubu ubuntu:latest sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+da2a408f6436d704caa647d96c2f737514eae9d1e13b6b172c9ca7e4bbcecc33
+
+arturo@arturomachine:~/opiskelukansio/2021_kevat/devops_docker/part_1$ docker exec -it ubu bash
+
+root@602c4309bef7:/# apt update && apt install -y curl
+...
+
+root@da2a408f6436:/# exit
+
+arturo@arturomachine:~/opiskelukansio/2021_kevat/devops_docker/part_1$ docker attach ubu 
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
