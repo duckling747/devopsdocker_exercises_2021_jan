@@ -1,0 +1,7 @@
+# first clone it:
+git clone https://github.com/docker-hy/spring-example-project.git
+# then build it:
+docker build -t javathingy .
+# run it:
+docker run --rm -p 4001:8080 javathingy
+# GET request to 4001 && click button

@@ -1,0 +1,9 @@
+# step 1: clone
+git clone https://github.com/docker-hy/rails-example-project.git
+# step 2: delete gemfile lock inside project
+rm Gemfile.lock
+# step 3: build docker image
+docker build -t rubythingy .
+# step 4: run it:
+docker run --rm -it -p 3000:3000 rubythingy
+# step n: press button

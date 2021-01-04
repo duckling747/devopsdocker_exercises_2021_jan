@@ -1,0 +1,4 @@
+git clone https://github.com/docker-hy/backend-example-docker.git
+docker build -t back .
+touch logs.txt
+docker run --rm -v $(pwd)/logs.txt:/logs.txt -p 8000:8000 back
