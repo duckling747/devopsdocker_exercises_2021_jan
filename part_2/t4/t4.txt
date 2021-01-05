@@ -1,0 +1,10 @@
+# step 1:
+# change .yml file so that it has same domain, or otherwise browser will complain about CORS error. For example:
+  environment:
+    - VIRTUAL_HOST=calculator.localtest.me
+# (see yml in current directory for more detail)
+# step 2:
+# scale
+docker-compose up --scale compute=10
+# step 3:
+go to url "calculator.localtest.me" w/ browser and hit that button!
