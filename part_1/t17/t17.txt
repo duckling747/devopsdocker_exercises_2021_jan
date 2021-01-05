@@ -1,0 +1,4 @@
+URL:
+"https://hub.docker.com/r/poweruserdockerman/arch_programming_env_stuffs"
+Pull command:
+"docker pull poweruserdockerman/arch_programming_env_stuffs"

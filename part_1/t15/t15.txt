@@ -1,0 +1,5 @@
+Link to the project in docker hub:
+"https://hub.docker.com/r/poweruserdockerman/buttonsapp"
+Docker pull command:
+docker pull poweruserdockerman/buttonsapp
+App runs in port 8000
