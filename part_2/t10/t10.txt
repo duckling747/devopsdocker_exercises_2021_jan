@@ -1,0 +1,7 @@
+The Dockerfiles for front and back are exactly the same as in part 1.
+The only changes are in docker-compose.yaml:
+
+  change #1: set environment variables for frontend's container (PORT="" and API_URL="/api/")
+
+  change #2 (not relevant): add "build" commands inside docker-compose.yaml, presuming the folders, "back" and "front", 
+      contain the cloned git repositories.
