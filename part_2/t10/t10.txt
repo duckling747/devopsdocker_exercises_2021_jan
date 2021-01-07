@@ -1,5 +1,5 @@
 The Dockerfiles for front and back are exactly the same as in part 1.
-The only changes are in docker-compose.yaml:
+The only changes are in docker-compose.yml:
 
   change #1: set environment variables for frontend's container (PORT="" and API_URL="/api/")
 
