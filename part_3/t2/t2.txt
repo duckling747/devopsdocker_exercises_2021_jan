@@ -1,0 +1,12 @@
+REPOSITORY:
+https://github.com/duckling747/buttons
+
+HEROKU:
+https://buttonsappwebmaster.herokuapp.com/
+
+Remarks:
+I used Github Actions for CI/deployment. The pipeline is definitely not optimal, as it takes some 3-4 minutes on each push to 
+compile the app. At first I tried to use "buildx" and a build cache as per the instructions on 
+https://docs.docker.com/ci-cd/github-actions/ to prevent useless recompilations, but had trouble preventing the pipeline from 
+compiling the app *a second time* when deploying to Heroku, after pushing to Docker Hub. So now it compiles/builds just once 
+on each push, without a build cache. 
