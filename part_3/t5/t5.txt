@@ -1,0 +1,9 @@
+# before:
+$ docker images
+frontend                                      latest              37bb02e9c974        26 hours ago        414MB
+backend                                       latest              1b34dd104c2f        26 hours ago        219MB
+
+# after:
+$ docker images
+frontend                                      latest              b8d1b0410678        44 seconds ago      123MB
+backend                                       latest              5f1acaa30f52        2 minutes ago       129MB

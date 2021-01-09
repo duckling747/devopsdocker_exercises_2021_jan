@@ -1,0 +1,61 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    build: ./front
+    ports:
+      - 5000:5000
+    depends_on:
+      - backend
+    environment:
+      - PORT=
+      - API_URL=/api/
+    
+  backend:
+    image: backend
+    build: ./back
+    ports:
+      - 8000:8000
+    volumes:
+      - ./logs.txt:/logs.txt
+    environment:
+      - REDIS=redis
+      - REDIS_PORT=7777
+      - DB_USERNAME=kayttaja
+      - DB_PASSWORD=salasana
+      - DB_NAME=db_nimi
+      - DB_HOST=db
+    depends_on:
+      - redis
+      - db
+
+  redis:
+    image: redis:6-alpine
+    command: ["redis-server", "--port", "7777", "--appendonly", "yes"]
+    volumes:
+      - redisvolume:/data
+
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=salasana
+      - POSTGRES_USER=kayttaja
+      - POSTGRES_DB=db_nimi
+    volumes:
+      - databasevolume:/var/lib/postgresql/data
+      
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+      - frontend
+ 
+volumes:
+  databasevolume:
+  redisvolume:

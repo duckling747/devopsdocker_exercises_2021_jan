@@ -1,0 +1,4 @@
+# before:
+poweruserdockerman/buttonsapp                 latest              a2f275711fbc        21 hours ago        82.3MB
+# after:
+poweruserdockerman/buttonsapp                 latest              9d83df4bd418        2 minutes ago       35.2MB
